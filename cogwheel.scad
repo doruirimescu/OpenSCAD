@@ -19,7 +19,7 @@ module servoPulley( n, r_inner, r_outer )
 }
 
 /*Empirical scale factor until pulley fits the belt*/
-scale_factor =1.25;
+scale_factor = 1.25;
 
 scale( scale_factor )
 {
