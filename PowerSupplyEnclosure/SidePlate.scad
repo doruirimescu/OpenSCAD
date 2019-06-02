@@ -38,7 +38,7 @@ difference()
         {
             square( [ usb_w, usb_h ] );
         }
-        translate( [ 1.5 + usb_hole_dist + usb_w + usb_hole_dist, 0 ] )
+        translate( [ 3 + usb_hole_dist + usb_w + usb_hole_dist, 0 ] )
         {
             circle( 1.5, center = false );
         }
