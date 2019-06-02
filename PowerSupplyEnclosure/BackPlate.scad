@@ -1,3 +1,4 @@
+$fn = 1000;
 difference()
 {
     /*Base plate*/
@@ -5,21 +6,21 @@ difference()
     
     /*Mounting holes attaching to enclosure*/
     translate( [ 18, 8 ] )
-        circle(3);
+        circle(1.5);
     translate( [ 210 - 18 , 8 ] )
-        circle(3);
+        circle(1.5);
     translate( [ 18 , 150 - 8 ] )
-        circle(3);
+        circle(1.5);
     translate( [ 210 - 18 , 150 - 8 ] )
-        circle(3);
+        circle(1.5);
      /*Side holes*/
     translate( [ 8, 150 / 2 ] )
-        circle( 3, center = false );
+        circle( 1.5, center = false );
     translate( [ 210 - 8, 150 / 2 ] )
-        circle( 3, center = false );
+        circle( 1.5, center = false );
     
     /*Heatsink*/
-    tol = 1;//!< 1 mm tolerance on both sides
+    tol = 0.5;//!< 1 mm tolerance on both sides
     polygon( points = [ [ 85 - tol, 0 ], [ 85 + 42 + tol, 0 ], 
     [ 85 + 42 + tol, 50 ], [ 85 + 42 / 2, 50 + 20 ], [ 85 - tol, 50 ] ]);
     
