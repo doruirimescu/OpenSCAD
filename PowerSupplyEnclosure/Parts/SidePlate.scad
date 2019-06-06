@@ -1,36 +1,36 @@
 $fn=300;
+include <../Parameters/SidePlate_param.scad>
 difference()
 {
-    square( [ 297, 150 ] );//!< The base plate
+    square( [ width, height ] );//!< The base plate
     
     /*Lower 3 holes*/
     translate( [ 18, 8.5 ] )
         circle( 1.5, center = false );
     translate( [ 148, 8.5 ] )
         circle( 1.5, center = false );
-    translate( [ 297 - 18.5, 8.5 ] )
+    translate( [ width - 18.5, 8.5 ] )
         circle( 1.5, center = false );
     
     /*Upper 3 holes*/
-    translate( [ 18, 150 - 8.5 ] )
+    translate( [ 18, height - 8.5 ] )
         circle( 1.5, center = false );
-    translate( [ 148, 150 - 8.5 ] )
+    translate( [ 148, height - 8.5 ] )
         circle( 1.5, center = false );
-    translate( [ 297 - 18, 150 - 8.5 ] )
+    translate( [ width - 18, height - 8.5 ] )
         circle( 1.5, center = false );
     
     /*Side holes*/
-    translate( [ 8, 150 / 2 ] )
+    translate( [ 8, height / 2 ] )
         circle( 1.5, center = false );
-    translate( [ 297-8, 150 / 2 ] )
+    translate( [ width - 8, height / 2 ] )
         circle( 1.5, center = false );
-    /*DC barrel jack*/
+        
+    /*DC barrell jack*/
     translate( [ 18, 25])
-        circle( 7.55/2 , center = false);
+        circle( dcb_diam / 2 , center = false);
+        
     /*USB B connector*/
-    usb_w = 12;
-    usb_h = 11;
-    usb_hole_dist = 8;
     translate( [ 30, 25 ] ) //!< position connector
     {
         circle( 1.5, center = false );
