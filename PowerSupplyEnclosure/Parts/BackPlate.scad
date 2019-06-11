@@ -25,11 +25,10 @@ difference()
     [ 85 + 42 + tol, 50 ], [ 85 + 42 / 2, 50 + 20 ], [ 85 - tol, 50 ] ]);
     
     /*Power button (single)*/
-    
     translate( [ 11.45, 150 - 20 - 20 ] )
         square( [ 12.12, 20 ] );
     
     /*Power button with IEC connector included*/
     translate( [ 11.45 + 12.12 + 8, 150 - 40 - 6.5 / 2 ] )
-        square( [18, 26.5]);
+        square( [19, 26.5]);
 }
