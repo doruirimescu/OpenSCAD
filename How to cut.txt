@@ -3,3 +3,6 @@ Export dxf file
 Import with manual scaling of x 10
 Reduce stroke width to 0.2mm
 Select vector mode
+Speed:70
+Power:90
+Passes:8

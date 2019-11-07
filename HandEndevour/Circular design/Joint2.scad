@@ -5,7 +5,7 @@ phalanx_radius = 1;
 helper_radius  = 0.25;
 disk_hole = 0.15;
 
-hull_dist = 1;
+hull_dist = 1+0.6;
 difference()
 {
     /* Create main "tear" shape */

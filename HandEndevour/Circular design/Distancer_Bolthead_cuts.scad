@@ -7,6 +7,7 @@ string_hole = 0.05;
 disk_hole = 0.15;
 hole_distance = 0.6;
 corner_radius = 0.1;
+bolthead = 0.54;
 
 difference()
 {
@@ -37,4 +38,13 @@ difference()
     translate( [ -hole_distance, 0 ] )
         circle( disk_hole );
     
+    /* bolthead hole */
+    translate( [ hole_distance, bolthead*1.05 ] )
+        circle( bolthead/2 );
+    translate( [ hole_distance, -bolthead*1.05 ] )
+        circle( bolthead/2 );
+    translate( [ -hole_distance, bolthead*1.05 ] )
+        circle( bolthead/2 );
+    translate( [ -hole_distance, -bolthead*1.05 ] )
+        circle( bolthead/2 );
 }
