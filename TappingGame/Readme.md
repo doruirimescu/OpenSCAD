@@ -5,7 +5,7 @@ The necessary laser cut parts for building an enclosure for arcade-style button 
 # Folder structure
 
 | Directory        | Description                                                                          |
-| ---------------- |:------------------------------------------------------------------------------------:|
+| ---------------- | ------------------------------------------------------------------------------------ |
 | `Assemblies`     | Assembly of multiple parts, for visualization purposes                               |
 | `Exports`        | Exported files for laser cutting                                                     |
 | `Modules`        | Building blocks that make up parts                                                   |
