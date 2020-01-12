@@ -37,7 +37,7 @@ mcu_height = 50.0;
 mcu_hole = 3;
 mcu_hole_offset = 3;
 mcu_x0 = lcd_x0 * 1.7;
-mcu_y0 = height - 2.0 * lcd_height - ( mcu_height - lcd_height ) / 2;
+mcu_y0 = lcd_y0 - ( mcu_height - lcd_height ) / 2;
 
 /* Text */
 text_font = "Times new Roman";
@@ -60,6 +60,10 @@ fitting_distance_v = ( height - fitting_number * fitting_length - 2 * fitting_of
 fittings_length_v = fitting_number * fitting_length + ( fitting_number - 1 ) * fitting_distance_v;
 
 
-
 /* Side plates */
 side_height = 50;
+
+/* USB B connector */
+usb_w = 12; //!< connector width
+usb_h = 11; //!< connector height
+usb_hole_dist = 8;//!< distance from connector to con hole
