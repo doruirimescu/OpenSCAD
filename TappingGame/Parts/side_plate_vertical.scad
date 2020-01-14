@@ -8,7 +8,7 @@ for_print = false;
 
 module side_plate_vertical()
 {
-    translate( [ fitting_width, height / 2 - fittings_length_v / 2 ] )
+    translate( [ fitting_width, ( height  - fittings_length_v ) / 2 ] )
     {
         rotate( a = [ 0, 0, 90 ] )
         {
@@ -21,12 +21,21 @@ module side_plate_vertical()
         {
             square( [ side_height, height ], center= false );
         }
-        translate( [-side_height/2, 10] )
+        translate( [-side_height/2, 20] )
         {
             rotate( a = [ 0, 0, 90 ] )
             {
                 usb_b();
             }
         }
+        translate( [ -side_height + ( side_height - fittings_length_l ) / 2 , 0] )
+        {
+            fittings_l();
+        }
+        translate( [ -side_height + ( side_height - fittings_length_l ) / 2 , height - fitting_width ] )
+        {
+            fittings_l();
+        }
     }
+
 }

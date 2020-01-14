@@ -3,7 +3,7 @@ $fn = 1000;
 
 /* Shows either buttons as whole, or 
     the design for print (button holes) */
-for_print = false; 
+for_print = true; 
 
 module front_plate()
 {
@@ -20,13 +20,14 @@ module front_plate()
         }
         translate( [ mcu_x0, mcu_y0 ] )
         {
-            mcu_plate();
+            //Will stack mcu plate over the lcd
+            //mcu_plate();
         }
         translate( [ width / 2 - fittings_length / 2 , fitting_offset ] )
         {
             fittings_h();
         }
-        translate( [ width / 2 - fittings_length / 2 , height - fitting_offset ] )
+        translate( [ width / 2 - fittings_length / 2 , height - fitting_width ] )
         {
             fittings_h();
         }
@@ -38,7 +39,7 @@ module front_plate()
                 fittings_v();
             }
         }
-        translate( [ width - ( fitting_width + fitting_offset ), height / 2 - fittings_length_v / 2 ] )
+        translate( [ width - ( fitting_offset ), height / 2 - fittings_length_v / 2 ] )
         {
             rotate( a = [ 0, 0, 90 ] )
             {
@@ -47,3 +48,5 @@ module front_plate()
         }
     }
 }
+front_plate($fn=1000);
+echo(width);

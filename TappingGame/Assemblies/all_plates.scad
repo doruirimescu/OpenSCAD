@@ -6,15 +6,21 @@ $fn = 1000;
 
 /* Shows either buttons as whole, or 
     the design for print (button holes) */
-for_print = false;
+for_print = true;
 
 front_plate();
 
-translate( [ 0, -50 ] )
+translate( [ fitting_width, -30 ] )
 {
-    side_plate_horizontal();
+    rotate( a = [ 0, 0, 0 ] )
+    {
+        side_plate_horizontal();
+    }
 }
-translate( [ -50, 0 ] )
+translate( [ -30, 0 ] )
 {
-    side_plate_vertical();
+    rotate( a = [ 0, 0, 0 ] )
+    {
+        side_plate_vertical();
+    }
 }

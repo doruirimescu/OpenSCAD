@@ -40,20 +40,28 @@ text_size = 7;
 text_height_scale = 1.3;
 text = [ "Left", "Right", "Select", "Back" ];
 
+/* Side plates */
+side_height = 100;
+
 /* Fitting */
-fitting_number_h = 20;
-fitting_number_v = 10;
-fitting_length = 10;
-fitting_offset = 10;
+fitting_number_h = 10;
+fitting_number_v = 5;
+fitting_length = 20;
+fitting_offset = 0;
 fitting_width = 3; //Acrylic or plywood thickness
+
 fitting_distance = ( width - fitting_number_h * fitting_length - 2 * fitting_offset ) / ( fitting_number_h  );
 fittings_length = fitting_number_h * fitting_length + ( fitting_number_h - 1 ) * fitting_distance;
 
 fitting_distance_v = ( height - fitting_number_v * fitting_length - 2 * fitting_offset ) / ( fitting_number_v  );
 fittings_length_v = fitting_number_v * fitting_length + ( fitting_number_v - 1 ) * fitting_distance_v;
 
-/* Side plates */
-side_height = 50;
+fitting_length_l = 10;
+fitting_number_l = 5;
+fitting_distance_l = ( side_height - fitting_number_l * fitting_length_l - 2 * fitting_offset ) / ( fitting_number_l  );
+fittings_length_l = fitting_number_l * fitting_length_l + ( fitting_number_l - 1 ) * fitting_distance_l;
+
+
 
 /* USB B connector */
 usb_w = 12; // connector width
