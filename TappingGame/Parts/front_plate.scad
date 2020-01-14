@@ -23,23 +23,23 @@ module front_plate()
             //Will stack mcu plate over the lcd
             //mcu_plate();
         }
-        translate( [ width / 2 - fittings_length / 2 , fitting_offset ] )
+        translate( [ ( width - fittings_length ) / 2 , fitting_offset ] )
         {
             fittings_h();
         }
-        translate( [ width / 2 - fittings_length / 2 , height - fitting_width ] )
+        translate( [ ( width - fittings_length ) / 2 , height - fitting_width ] )
         {
             fittings_h();
         }
         
-        translate( [ fitting_width + fitting_offset, height / 2 - fittings_length_v / 2 ] )
+        translate( [ fitting_width + fitting_offset, ( height - fittings_length_v ) / 2 ] )
         {
             rotate( a = [0,0,90] )
             {
                 fittings_v();
             }
         }
-        translate( [ width - ( fitting_offset ), height / 2 - fittings_length_v / 2 ] )
+        translate( [ width - ( fitting_offset ), ( height - fittings_length_v ) / 2 ] )
         {
             rotate( a = [ 0, 0, 90 ] )
             {
@@ -48,5 +48,3 @@ module front_plate()
         }
     }
 }
-front_plate($fn=1000);
-echo(width);
