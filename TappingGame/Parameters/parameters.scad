@@ -6,21 +6,22 @@ button_whole_diameter = 60; //the space that the whole button takes
 n_buttons = 4;
 
 /* Button locations */
-button_plate_distance  = 50; //distance between button and plate edge
-button_button_distance = 50; //distance between 2 button edges
+button_plate_distance  = 30; //distance between button and plate edge
+button_button_distance = 30; //distance between 2 button edges
 button_x0 = button_plate_distance + button_whole_diameter / 2;
 button_y0 = button_plate_distance + button_whole_diameter / 2;
 
 /* Front plate dimensions */
 width = n_buttons * button_whole_diameter + ( n_buttons - 1 ) * button_button_distance + button_plate_distance * 2 ;
-height = 250;
+height = 200;
 
 /* LCD parameters */
 lcd_width = 98.1;
 lcd_height = 42.1;
 
 lcd_hole = 4; //lcd hole diameter (make it larger)
-lcd_hole_vertical_offset = 6.22;//up left hole offset
+lcd_hole_vertical_offset = 6.5;//up left hole offset
+lcd_hole_horizontal_offset = 2.5;
 
 lcd_x0 = width / 2 - lcd_width / 2;
 lcd_y0 = height - 2.0 * lcd_height;
@@ -30,7 +31,7 @@ mcu_width = 100;
 mcu_height = 50.0;
 mcu_hole = 3;
 mcu_hole_offset = 3;
-mcu_x0 = lcd_x0 * 1.7;
+mcu_x0 = lcd_x0 * 1.8;
 mcu_y0 = lcd_y0 - ( mcu_height - lcd_height ) / 2;
 
 /* Text */
