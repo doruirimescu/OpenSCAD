@@ -26,6 +26,8 @@ lcd_hole_horizontal_offset = 2.5;
 lcd_x0 = width / 2 - lcd_width / 2;
 lcd_y0 = height - 2.0 * lcd_height;
 
+lcd_plate_width = lcd_width - 2 * lcd_hole_horizontal_offset;
+lcd_plate_height = lcd_height + 2 * lcd_hole_vertical_offset;
 /* MCU plate parameters */
 mcu_width = 100;
 mcu_height = 50.0;
@@ -45,7 +47,7 @@ side_height = 100;
 
 /* Fitting */
 fitting_number_h = 10;
-fitting_number_v = 5;
+fitting_number_v = 6;
 fitting_length = 20;
 fitting_offset = 0;
 fitting_width = 3; //Acrylic or plywood thickness
