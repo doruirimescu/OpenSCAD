@@ -1,5 +1,6 @@
 include <../Parameters/includes.scad>
 include <../Parts/front_plate.scad>
+include <../Parts/bottom_plate.scad>
 include <../Parts/side_plate_horizontal.scad>
 include <../Parts/side_plate_vertical.scad>
 $fn = 1000;
@@ -9,18 +10,29 @@ $fn = 1000;
 for_print = true;
 
 front_plate();
-
-translate( [ fitting_width, -30 ] )
+dx = -3;
+translate( [ fitting_width, -dx ] )
 {
-    rotate( a = [ 0, 0, 0 ] )
+    rotate( a = [ 90, 0, 0 ] )
     {
         side_plate_horizontal();
     }
 }
-translate( [ -30, 0 ] )
+translate( [ -dx, 0 ] )
 {
-    rotate( a = [ 0, 0, 0 ] )
+    rotate( a = [ 0, -90, 0 ] )
     {
         side_plate_vertical();
     }
+}
+translate( [ width + dx, 0 ] )
+{
+    rotate( a = [ 0, -90, 0 ] )
+    {
+        side_plate_vertical();
+    }
+}
+translate([ 0, 0, -side_height ] )
+{
+   // bottom_plate();
 }
