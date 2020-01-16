@@ -15,6 +15,13 @@ module side_plate_vertical()
             fittings_v();
         }
     }
+    translate( [ -side_height, ( height  - fittings_length_v ) / 2 ] )
+    {
+        rotate( a = [ 0, 0, 90 ] )
+        {
+            fittings_v();
+        }
+    }
     difference()
     {
         translate( [-side_height , 0 ] )
@@ -32,10 +39,10 @@ module side_plate_vertical()
         {
             fittings_l();
         }
-        translate( [ -side_height + ( side_height - fittings_length_l ) / 2 , height - fitting_width ] )
+        translate( [ -side_height + ( side_height - fittings_length_l ) / 2 , 
+        height - fitting_width ] )
         {
             fittings_l();
         }
     }
-
 }
